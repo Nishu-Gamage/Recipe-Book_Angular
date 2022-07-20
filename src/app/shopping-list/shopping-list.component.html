@@ -1,0 +1,23 @@
+<div class="row">
+     <div class="col-xs-0 col-sm-0 col-md-2"></div>     
+     <div class="col-md-8 p-5">  
+          <!-- Add Shopping List --> 
+          <div class="add-shopping-list">
+               <!-- <app-s-add-shopping-list
+                    (addShopping)="addtoShoppingL($any($event))" >
+               </app-s-add-shopping-list> -->
+               <app-add-shopping-list></app-add-shopping-list>
+          </div>
+          <hr>
+          <!-- Display Shopping List -->
+          <div class="display-shopping-list">
+               <!-- <app-s-display-shopping-list
+                    *ngFor="let arrayInput of shopping_list"
+                    [displayShoppingL] = "arrayInput" 
+                    (delRow)="delelteShoppingL($event)" >
+               </app-s-display-shopping-list> -->
+               
+               <app-display-shopping-list></app-display-shopping-list>
+          </div>
+     </div>
+</div>
