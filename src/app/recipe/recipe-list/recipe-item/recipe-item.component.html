@@ -2,13 +2,15 @@
 <!-- <h5>Please select a Recipe</h5> -->
 
 <!-- Display after select a recipe -->
-<div class="container">
-     <div class="col-md-6">
-          <div class="text-center">
-               <img src="assets/classic-pizza.jpeg" class="img-fluid">  
+<a class="list-group-item clearfix" (click)="onSelect()" href="">
+     <div class="row">
+          <div class="col-xs-7"> 
+               <h4 class="list-group-item fw-bold">Classic Pizza Recipe</h4>
+               <p>Description</p>
           </div> 
-          <h4>Classic Pizza Recipe</h4>
-          <button class="btn btn-primary dropdown-toggle mt-2">Manage Recipe</button>
-          <p>Description<br>Ingredients</p>
+          <div class="col-xs-5">
+               <img src="assets/classic-pizza.jpeg"
+                    style="max-height: 50px;" >
+          </div>     
      </div>
-</div>
+</a>

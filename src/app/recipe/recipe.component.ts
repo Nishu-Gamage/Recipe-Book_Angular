@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RecipeComponent implements OnInit {
 
-  r_Array = ["recipe-1", "recipe-2", "recipe-3"]
+  // r_Array = ["recipe-1", "recipe-2", "recipe-3"]
 
   constructor() { }
   ngOnInit(): void {  }
