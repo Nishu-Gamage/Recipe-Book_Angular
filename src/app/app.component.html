@@ -7,7 +7,7 @@
      <title>Recipe Book</title>
 </head>
 <body>
-     <app-navbar (navLink)="onNavEvent($event)"></app-navbar>
+     <app-navbar (navLink) = "onNavEvent($event)"></app-navbar>
      <app-recipe *ngIf="loaderFeature === 'recipe'"></app-recipe>
      <app-shopping-list *ngIf="loaderFeature === 'shopping-list'"></app-shopping-list>
 </body>

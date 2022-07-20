@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-display-shopping-list',
@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DisplayShoppingListComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit(): void {
+  @Input("displayShoppingList") element: {type:string , name:string , content:string } = {
+    type : '',
+    name : '',
+    content : ''
   }
+  constructor() { }
+  ngOnInit(): void {  }
 
 }

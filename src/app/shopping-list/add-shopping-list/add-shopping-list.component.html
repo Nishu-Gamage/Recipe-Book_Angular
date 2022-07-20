@@ -1,12 +1,13 @@
 <div class="row">
      <div class="col-md-8">
           <p>Name</p>
-          <input type="text" class="form-control" placeholder="">
+          <input [(ngModel)]="add_Name" type="text" class="form-control">
      </div>
      <div class="col-md-4">
           <p>Amount</p>
-          <input class="form-control" type="text" placeholder=""
-                    oninput="this.value = this.value.replace(/[^0-9.]/g, '')">
+          <input class="form-control" type="text"
+               [(ngModel)]="add_Amount"
+               oninput="this.value = this.value.replace(/[^0-9.]/g, '')">
      </div>
       <!-- Error -->
       <div [style.visibility]="emptyError ? 'visible' : 'hidden'" class="text-danger mt-2">
@@ -14,8 +15,8 @@
       </div>
       <!-- btn set -->
      <div class="btn-set ">
-          <button class="btn btn-success">Add</button>
+          <button (click)="addShoppingList()" class="btn btn-success">Add</button>
           <button class="btn btn-danger ms-2">Delete</button>
-          <button class="btn btn-primary ms-2">Clear</button>
-     </div>     
-</div>
+          <button (click)="clearForm()" class="btn btn-primary ms-2">Clear</button>
+     </div>
+</div> 

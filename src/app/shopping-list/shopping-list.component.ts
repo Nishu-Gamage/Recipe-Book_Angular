@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShoppingListComponent implements OnInit {
 
-  constructor() { }
+  shoppingList:any = [];
 
-  ngOnInit(): void {
+  addtoShoppingL(addSData:{ addSName:string , addSAmount:string }){
+    this.shoppingList.push({
+      type : 'Add',
+      name : addSData.addSName , 
+      content : addSData.addSAmount
+    })
   }
+
+  constructor() { }
+  ngOnInit(): void {  }
 
 }

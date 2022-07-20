@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  loaderFeature = 'recipe';
+  loaderFeature = 'shopping-list';
 
   onNavEvent(navClickEvent:string){
     this.loaderFeature = navClickEvent;
