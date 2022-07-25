@@ -1,11 +1,11 @@
-<a class="list-group-item clearfix" (click)="onSelect()" href="">
+<a class="list-group-item clearfix" (click)="onSelect()" href="#">
      <div class="row">
           <div class="col-md-7">
                <h4 class="list-group-item fw-bold">Classic Pizza Recipe</h4>
                <p>Description</p>
           </div>
           <div class="col-md-5">
-               <img src="assets/classic-pizza.jpeg"
+               <img src={{recipe?.imgPath}}
                     style="max-height: 50px;" >
           </div>
      </div>
