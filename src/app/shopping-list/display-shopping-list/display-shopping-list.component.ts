@@ -15,4 +15,8 @@ export class DisplayShoppingListComponent implements OnInit {
   constructor() { }
   ngOnInit(): void {  }
 
+  onSelectShoopingItem(){
+
+  }
+
 }

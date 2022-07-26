@@ -12,7 +12,7 @@ export class RecipeItemComponent implements OnInit {
   @Output() recipeSelected = new EventEmitter <void> ();
 
   constructor() { }
-  ngOnInit(): void {  }
+  ngOnInit(): void { }
 
   onSelect(){ 
     this.recipeSelected.emit();
