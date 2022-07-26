@@ -1,6 +1,5 @@
 <div class="mt-2" (click)="onSelectShoopingItem()">
      <input type="text" class="form-control bg-white text-dark" 
-          *ngIf="element.type === 'Add'"
-          placeholder={{element.name}}　({{element.content}})
+          placeholder={{element?.name}}　({{element?.amount}})
           readonly >
 </div>

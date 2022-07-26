@@ -1,12 +1,12 @@
 <div class="row">
      <div class="col-md-8">
           <p>Name</p>
-          <input [(ngModel)]="add_Name" type="text" class="form-control">
+          <input [(ngModel)]="name" type="text" class="form-control">
      </div>
      <div class="col-md-4">
           <p>Amount</p>
           <input class="form-control" type="text"
-               [(ngModel)]="add_Amount"
+               [(ngModel)]="amount"
                oninput="this.value = this.value.replace(/[^0-9.]/g, '')">
      </div>
       <!-- Error -->

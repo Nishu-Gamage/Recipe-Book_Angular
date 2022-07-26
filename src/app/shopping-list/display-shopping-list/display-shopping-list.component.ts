@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Ingredient } from '../Ingredients';
 
 @Component({
   selector: 'app-display-shopping-list',
@@ -7,13 +8,10 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class DisplayShoppingListComponent implements OnInit {
 
-  @Input("displayShoppingList") element: {type:string , name:string , content:string } = {
-    type : '',
-    name : '',
-    content : ''
-  }
+  @Input("displayShoppingList") element:Ingredient | undefined; 
+  
   constructor() { }
-  ngOnInit(): void {  }
+  ngOnInit(): void { }
 
   onSelectShoopingItem(){
 

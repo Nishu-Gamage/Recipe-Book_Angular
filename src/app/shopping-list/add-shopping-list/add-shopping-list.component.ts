@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Ingredient } from '../Ingredients';
 
 @Component({
   selector: 'app-add-shopping-list',
@@ -7,27 +8,25 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class AddShoppingListComponent implements OnInit {
 
-  add_Name:string ='';
-  add_Amount:string = '';
+  name:string ='';
+  amount:number = 0;
   emptyError = false;
 
-  @Output() addShopping = new EventEmitter <{ addSName:string , addSAmount:string }> ();
+  @Output() addShopping = new EventEmitter <Ingredient> () ;
 
   addShoppingList(){
-    if(this.add_Name && this.add_Amount){
-      this.addShopping.emit({        
-        addSName : this.add_Name,
-        addSAmount : this.add_Amount        
-      })
+    if(this.name && this.amount > 0){
+      const newIngredient = new Ingredient (this.name, this.amount)  
+      this.addShopping.emit( newIngredient )
       this.emptyError = false;
-      this.add_Name =''; this.add_Amount ='';
+      this.name =''; this.amount = 0;
     } 
     else { this.emptyError = true; }
   }
-
+  
   clearForm(){
     this.emptyError = false;
-    this.add_Name =''; this.add_Amount ='';
+    this.name =''; this.amount = 0;
   }
 
   constructor() { }

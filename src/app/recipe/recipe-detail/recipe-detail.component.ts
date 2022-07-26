@@ -8,9 +8,9 @@ import { Recipe } from '../recipe.model';
 })
 export class RecipeDetailComponent implements OnInit {
 
-  @Input() recipe:Recipe | undefined;
+  @Input() recipeItem:Recipe | undefined;
 
   constructor() { }
-  ngOnInit(): void {  }
+  ngOnInit(): void { }
 
 }
