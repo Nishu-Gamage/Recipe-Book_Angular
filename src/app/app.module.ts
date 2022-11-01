@@ -12,6 +12,7 @@ import { DisplayShoppingListComponent } from './shopping-list/display-shopping-l
 import { AddRecipeComponent } from './recipe/add-recipe/add-recipe.component';
 import { FormsModule } from '@angular/forms';
 import { RecipeDetailComponent } from './recipe/recipe-detail/recipe-detail.component';
+import { DropdownDirective } from './navbar/shared/dropdown.directive';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { RecipeDetailComponent } from './recipe/recipe-detail/recipe-detail.comp
     AddShoppingListComponent,
     DisplayShoppingListComponent,
     AddRecipeComponent,
-    RecipeDetailComponent
+    RecipeDetailComponent,
+    DropdownDirective
   ],
   imports: [
     BrowserModule,

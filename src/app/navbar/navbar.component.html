@@ -3,16 +3,30 @@
      <div class="navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav col-10">
                <a (click)="onSelect('recipe')" class="nav-item nav-link active ms-5" href="#recipe">Recipe</a>
-               <a (click)="onSelect('shopping-list')" class="nav-item nav-link ms-5" href="#shopping-list">Shopping list</a>
+               <a (click)="onSelect('shopping-list')" class="nav-item nav-link ms-5" href="#shopping-list">Shopping
+                    list</a>
                <a (click)="onSelect('manage')" class="nav-item nav-link ms-5" href="#manage">Manage</a>
           </div>
-          <div class="col-1">
-               <select class="form-select">
-                    <option selected>Manage</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-               </select>
+          <!-- <div class="dropdown">
+               <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Dropdown button
+               </button>
+               <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+               </ul>
+          </div> -->
+          <div class="btn-group">
+               <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" appDropdown #r="appDropDown">
+                    Actions
+               </button>
+               <div [ngClass]="{'show':r.isOpen}" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" style="cursor: pointer;">One</a>
+                    <a class="dropdown-item" style="cursor: pointer;">Two</a>
+               </div>
           </div>
      </div>
 </nav>
