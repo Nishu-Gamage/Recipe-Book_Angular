@@ -1,5 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Ingredient } from '../Ingredients';
+import { ShoppingListService } from '../shoppingList.service';
 
 @Component({
   selector: 'app-add-shopping-list',
@@ -17,7 +18,7 @@ export class AddShoppingListComponent implements OnInit {
   addShoppingList(){
     if(this.name && this.amount > 0){
       const newIngredient = new Ingredient (this.name, this.amount)  
-      this.addShopping.emit( newIngredient )
+      this.shoppingListService.addShoppingIngredients(newIngredient);
       this.emptyError = false;
       this.name =''; this.amount = 0;
     } 
@@ -29,7 +30,8 @@ export class AddShoppingListComponent implements OnInit {
     this.name =''; this.amount = 0;
   }
 
-  constructor() { }
-  ngOnInit(): void {  }
+  constructor(private shoppingListService: ShoppingListService) { }
+
+  ngOnInit(): void { }
 
 }
