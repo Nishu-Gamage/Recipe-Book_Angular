@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output, OnChanges,  SimpleChanges } from '@angular/core';
 import { Recipe } from '../../recipe.model';
+import { RecipeService } from '../../recipe.service';
 
 @Component({
   selector: 'app-recipe-item',
@@ -9,13 +10,13 @@ import { Recipe } from '../../recipe.model';
 export class RecipeItemComponent implements OnInit, OnChanges{
 
   @Input() recipe:Recipe | undefined ;
-  @Output() recipeSelected = new EventEmitter <void> ();
 
-  constructor() { }
+  constructor(private recipeService:RecipeService) { }
+
   ngOnInit(): void { }
 
-  onSelect(){ 
-    this.recipeSelected.emit();
+  onSelect(){
+    this.recipeService.recipeSelected.emit(this.recipe);
   }
 
   ngOnChanges(change:SimpleChanges): void {
